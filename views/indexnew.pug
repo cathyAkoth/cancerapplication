@@ -1,0 +1,555 @@
+meta(charset="utf-8")
+meta(content="width=device-width,initial-scale=1", name="viewport")
+title Cancer App
+meta(content, name="description")
+meta(content, name="keywords")
+//  Google Fonts 
+link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i", rel="stylesheet")
+//  Vendor CSS Files 
+link(href="assets/vendor/fontawesome-free/css/all.min.css", rel="stylesheet")
+link(href="assets/vendor/animate.css/animate.min.css", rel="stylesheet")
+link(href="assets/vendor/aos/aos.css", rel="stylesheet")
+link(href="assets/vendor/bootstrap/css/bootstrap.min.css", rel="stylesheet")
+link(href="assets/vendor/bootstrap-icons/bootstrap-icons.css", rel="stylesheet")
+link(href="assets/vendor/boxicons/css/boxicons.min.css", rel="stylesheet")
+link(href="assets/vendor/glightbox/css/glightbox.min.css", rel="stylesheet")
+link(href="assets/vendor/swiper/swiper-bundle.min.css", rel="stylesheet")
+//  Template Main CSS File 
+link(href="assets/css/style.css", rel="stylesheet")
+//  ======= Header ======= 
+header#header.fixed-top
+  .container.d-flex.align-items-center
+    h1.logo.me-auto
+      a(href="index.html") Cancer App
+    nav#navbar.navbar.order-last.order-lg-0
+      ul
+        li
+          a.nav-link.scrollto(href="#hero") Home
+        li
+          a.nav-link.scrollto(href="#about") About
+        li
+          a.nav-link.scrollto(href="/cervicalcancer") Cervical cancer
+        li
+          a.nav-link.scrollto(href="/breastcancer") Breast cancer
+        li
+          a.nav-link.scrollto(href="/prostatecancer") Prostate cancer
+        li
+          a.nav-link.scrollto(href="/throatcancer") Throat cancer
+      i.bi.bi-list.mobile-nav-toggle
+    //  .navbar 
+    a.appointment-btn.scrollto(href="/login")
+      span.d-none.d-md-inline login
+    a.appointment-btn.scrollto(href="/signup")
+      span.d-none.d-md-inline Contact a specialist
+//  End Header 
+//  ======= Hero Section ======= 
+section#hero
+  #heroCarousel.carousel.slide.carousel-fade(data-bs-interval="5000", data-bs-ride="carousel")
+    ol.carousel-indicators#hero-carousel-indicators
+    .carousel-inner(role="listbox")
+      //  Slide 1 
+      .carousel-item.active(style="background-image: linear-gradient(rgba(10, 10, 10, 0.7),rgba(12, 12, 12, 0.7)),url(assets/img/cancerimage.webp)")
+        .container
+          h2
+            | Welcome to 
+            span CancerApp
+          p We bridge the gap in accessing cancer Information that is accurate and providing urgent care
+          //  <a href="/aboutUs.html" class="btn-get-started scrollto">Read More</a> 
+      //  Slide 2 
+      .carousel-item(style="background-image:  linear-gradient(rgba(10, 10, 10, 0.7),rgba(12, 12, 12, 0.7)),url(assets/img/slide/slide-2.jpg)")
+        .container
+          h2
+            | Welcome to 
+            span CancerApp
+          p We bridge the gap in accessing cancer Information that is accurate and providing urgent care
+          //  <a href="/aboutUs.html" class="btn-get-started scrollto">Read More</a> 
+      //  Slide 3 
+      .carousel-item(style="background-image: linear-gradient(rgba(10, 10, 10, 0.7),rgba(12, 12, 12, 0.7)),url(assets/cancerimages/heroimages/images1.jpg)")
+        .container
+          h2
+            | Welcome to 
+            span CancerApp
+          p We bridge the gap in accessing cancer Information that is accurate and providing urgent care
+          //  <a href="/aboutUs.html" class="btn-get-started scrollto">Read More</a> 
+    a.carousel-control-prev(href="#heroCarousel", role="button", data-bs-slide="prev")
+      span.carousel-control-prev-icon.bi.bi-chevron-left(aria-hidden="true")
+    a.carousel-control-next(href="#heroCarousel", role="button", data-bs-slide="next")
+      span.carousel-control-next-icon.bi.bi-chevron-right(aria-hidden="true")
+//  End Hero 
+main#main
+  //  ======= About Us Section ======= 
+  section#about.about
+    .container(data-aos="fade-up")
+      .section-title
+        h2 What Is Cancer?
+        p.
+          Cancer is a disease in which some of the body’s cells grow uncontrollably and spread to other parts of the body. Cancer can start almost anywhere in the human body, which is made up of trillions of cells. Normally, human cells grow and multiply (through a process called cell division) to form new cells as the body needs them. When cells grow old or become damaged, they die, and new cells take their place.
+          
+        br
+        p Sometimes this orderly process breaks down, and abnormal or damaged cells grow and multiply when they shouldn’t. These cells may form tumors, which are lumps of tissue. Tumors can be cancerous or not cancerous (benign).
+        br
+        p Cancerous tumors spread into, or invade, nearby tissues and can travel to distant places in the body to form new tumors (a process called metastasis). Cancerous tumors may also be called malignant tumors. Many cancers form solid tumors, but cancers of the blood, such as leukemias, generally do not.
+        br
+        p Benign tumors do not spread into, or invade, nearby tissues. When removed, benign tumors usually don’t grow back, whereas cancerous tumors sometimes do. Benign tumors can sometimes be quite large, however. Some can cause serious symptoms or be life threatening, such as benign tumors in the brain.
+      .row
+        .col-lg-6(data-aos="fade-right")
+          img.img-fluid(src="assets/img/about.jpg", alt)
+        .col-lg-6.pt-4.pt-lg-0.content(data-aos="fade-left")
+          h3 How Does Cancer Develop?
+          p.fst-italic
+            | 
+Cancer is a genetic disease—that is, it is caused by changes to genes that control the way our cells function, especially how they grow and divide.
+
+            br
+            | 
+Genetic changes that cause cancer can happen because:
+
+          ul
+            li
+              i.bi.bi-check-circle
+              |  of errors that occur as cells divide.
+            li
+              i.bi.bi-check-circle
+              |  of damage to DNA caused by harmful substances in the environment, such as the chemicals in tobacco smoke and ultraviolet rays from the sun..
+            li
+              i.bi.bi-check-circle
+              |  hey were inherited from our parents.
+          p
+            | 
+The body normally eliminates cells with damaged DNA before they turn cancerous. But the body’s ability to do so goes down as we age. This is part of the reason why there is a higher risk of cancer later in life.
+
+            br
+            br
+            | 
+Each person’s cancer has a unique combination of genetic changes. As the cancer continues to grow, additional changes will occur. Even within the same tumor, different cells may have different genetic changes.
+
+  
+  //  ======= Features Section ======= 
+  section#features.features
+    .container(data-aos="fade-up")
+      h2 How can cancer be detected?
+      .row
+        .col-lg-6.order-2.order-lg-1(data-aos="fade-right")
+          .icon-box.mt-5.mt-lg-0
+            i.bx.bx-receipt
+            h4 Lab tests
+            p High or low levels of certain substances in your body can be a sign of cancer. So, lab tests of your blood, urine, or other body fluids that measure these substances can help doctors make a diagnosis. However, abnormal lab results are not a sure sign of cancer.
+          .icon-box.mt-5
+            i.bx.bx-cube-alt
+            h4 Imaging Tests
+            p Imaging tests create pictures of areas inside your body that help the doctor see whether a tumor is present. These pictures can be made in several ways:
+            ul(style="margin-left: 60px;")
+              li CT scans
+              li MRI
+              li Nuclear scan
+          .icon-box.mt-5
+            i.bx.bx-images
+            h4 Biopsy
+            p In most cases, doctors need to do a biopsy to diagnose cancer. A biopsy is a procedure in which the doctor removes a sample of tissue. A pathologist looks at the tissue under a microscope and runs other tests to see if the tissue is cancer. The pathologist describes the findings in a pathology report, which contains details about your diagnosis.
+          //
+             <div class="icon-box mt-5">
+                      <i class="bx bx-shield"></i>
+                      <h4>Beatae veritatis</h4>
+                      <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                    </div> 
+        .image.col-lg-6.order-1.order-lg-2(style="background-image: url('');", data-aos="zoom-in")
+  //  End Features Section 
+  //  ======= Services Section ======= 
+  section#services.services.services
+    .container(data-aos="fade-up")
+      .section-title
+        h2 Services
+        p.
+          Some of the services we offer directly to make sure the public is more knowledgeable about cancer and get the help they need if required.
+          
+      .row
+        .col-lg-4.col-md-6.icon-box(data-aos="zoom-in", data-aos-delay="100")
+          .icon
+            i.fas.fa-info
+          h4.title
+            a(href) Cancer Information
+          p.description We provide the public with free cancer information. Our information is accurate and updated on a regular basis so that we it it up to date.
+        .col-lg-4.col-md-6.icon-box(data-aos="zoom-in", data-aos-delay="200")
+          .icon
+            i.fas.fa-nodes
+          h4.title
+            a(href) Specialist Services
+          p.description We connect you to specialists that have great knowledge of a particular kind of cancer.
+        .col-lg-4.col-md-6.icon-box(data-aos="zoom-in", data-aos-delay="300")
+          .icon
+            i.fas.fa-hospital-user
+          h4.title
+            a(href) Diagnosis
+          p.description We connect you to specialists who will give you accurate diagnosis.
+  //  End Services Section 
+  //  ======= Departments Section ======= 
+  section#departments.departments
+    .container(data-aos="fade-up")
+      .section-title
+        h2 Let's Talk About Cancer
+        p We believe information and knowledge is power, Get The Facts Here.
+      .row(data-aos="fade-up", data-aos-delay="100")
+        .col-lg-4.mb-5.mb-lg-0
+          ul.nav.nav-tabs.flex-column
+            li.nav-item
+              a.nav-link.active.show(data-bs-toggle="tab", data-bs-target="#tab-1")
+                h4 Breast Cancer
+                p Cancer That affects The breast.
+            li.nav-item.mt-2
+              a.nav-link(data-bs-toggle="tab", data-bs-target="#tab-2")
+                h4 Cervical Cancer
+                p Cancer that affects the cervix.
+            li.nav-item.mt-2
+              a.nav-link(data-bs-toggle="tab", data-bs-target="#tab-3")
+                h4 Prostate Cancer
+                p Prostate cancer is cancer that occurs in the prostate. The prostate is a small walnut-shaped gland in males that produces the seminal fluid.
+            li.nav-item.mt-2
+              a.nav-link(data-bs-toggle="tab", data-bs-target="#tab-4")
+                h4 Throat cancer
+                p Throat cancer refers cancer that develops in your throat (pharynx) or voice box (larynx).
+        .col-lg-8
+          .tab-content
+            .tab-pane.active.show#tab-1
+              h3 Breast Cancer
+              p.fst-italic There are several types of breast cancer. The most commonTrusted Source type is ductal carcinoma, which begins in a milk duct.
+              img.img-fluid(src="assets/img/breastNaked.webp", alt)
+              p.
+                Breast cancer is the most common invasive cancer in females. It is also a leading cause of cancer deaths among females.
+                
+              a.appointment-btn.scrollto(href="./breastCancer.html")
+                span.d-none.d-md-inline Know More
+            .tab-pane#tab-2
+              h3 Cervical Cancer
+              p.fst-italic Cervical cancer develops in a woman's cervix (the entrance to the uterus from the vagina)
+              img.img-fluid(src="assets/cancerimages/cervicalimages/images (3).jpg", alt)
+              p Almost all cervical cancer cases (99%) are linked to infection with high-risk human papillomaviruses (HPV), an extremely common virus transmitted through sexual contact. Although most infections with HPV resolve spontaneously and cause no symptoms, persistent infection can cause cervical cancer in women. Cervical cancer is the fourth most common cancer in women. In 2018, an estimated 570 000 women were diagnosed with cervical cancer worldwide and about 311 000 women died from the disease.
+              a.appointment-btn.scrollto(href="./cervicalCancer.html")
+                span.d-none.d-md-inline Know More
+            .tab-pane#tab-3
+              h3 Prostate Cancer
+              p.fst-italic Prostate cancer is a common type of cancer in males, but it is highly treatable in the early stages.
+              img.img-fluid(src="assets/cancerimages/prostateimages/images (3).jpg", alt)
+              p Prostate cancer is cancer of the prostate gland. It is the second-leading cause of cancer death for men
+              a.appointment-btn.scrollto(href="./prostateCancer.html")
+                span.d-none.d-md-inline Know More
+            .tab-pane#tab-4
+              h3 Throat Cancer
+              p.fst-italic Throat cancer (including cancers of the larynx and tonsils) can affect anyone.
+              img.img-fluid(src="assets/cancerimages/throatcancer/images (5).jpg", alt)
+              p There are several different types of throat cancer and many places within the throat where cancer can develop. The symptoms and progression will depend on the type and location of the cancer.
+              a.appointment-btn.scrollto(href="./throatCancer.html")
+                span.d-none.d-md-inline Know More
+  //  End Departments Section 
+  //  ======= Cta Section ======= 
+  section#cta.cta
+    .container(data-aos="zoom-in")
+      .text-center
+        h3 In an emergency? Need help now?
+        p Let us get you help.
+        a.cta-btn.scrollto(href="#appointment") Make an Make an Appointment
+  //  End Cta Section 
+  //  ======= Counts Section ======= 
+  section#counts.counts
+    .container(data-aos="fade-up")
+      .row.no-gutters
+        .col-lg-3.col-md-6.d-md-flex.align-items-md-stretch
+          .count-box
+            i.fas.fa-user-md
+            span.purecounter(data-purecounter-start="0", data-purecounter-end="85", data-purecounter-duration="1")
+            p
+              strong Doctors
+              |  All qualified doctors who make first diagnosis and make referrals.
+            //  <a href="#">Find out more &raquo;</a> 
+        .col-lg-3.col-md-6.d-md-flex.align-items-md-stretch
+          .count-box
+            i.fas.fa-users
+            span.purecounter(data-purecounter-start="0", data-purecounter-end="1226", data-purecounter-duration="1")
+            p
+              strong Patients
+              |  Patients that have used our services and received help.
+            //  <a href="#">Find out more &raquo;</a> 
+        .col-lg-3.col-md-6.d-md-flex.align-items-md-stretch
+          .count-box
+            i.fas.fa-flask
+            span.purecounter(data-purecounter-start="0", data-purecounter-end="14", data-purecounter-duration="1")
+            p
+              strong Research Lab
+              |  our labs are well equipped and we are always doing research to get better at what we do.
+            //  <a href="#">Find out more &raquo;</a> 
+        .col-lg-3.col-md-6.d-md-flex.align-items-md-stretch
+          .count-box
+            i.fas.fa-award
+            span.purecounter(data-purecounter-start="0", data-purecounter-end="15", data-purecounter-duration="1")
+            p
+              strong Awards
+              | are appreciation of our work.
+            //  <a href="#">Find out more &raquo;</a> 
+  //  End Counts Section 
+  //  ======= Testimonials Section ======= 
+  //
+     <section id="testimonials" class="testimonials">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="section-title">
+              <h2>Testimonials</h2>
+              <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div>
+    
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+    
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                    <h3>Saul Goodman</h3>
+                    <h4>Ceo &amp; Founder</h4>
+                  </div>
+                </div><!-- End testimonial item 
+  //
+      --<div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                    <h3>Sara Wilsson</h3>
+                    <h4>Designer</h4>
+                  </div>
+                </div><!-- End testimonial item 
+  //
+     <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                    <h3>Jena Karlis</h3>
+                    <h4>Store Owner</h4>
+                  </div>
+                </div><!-- End testimonial item 
+  //
+     <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                    <h3>Matt Brandon</h3>
+                    <h4>Freelancer</h4>
+                  </div>
+                </div>End testimonial item 
+  //
+     <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                    <h3>John Larson</h3>
+                    <h4>Entrepreneur</h4>
+                  </div> 
+  //  </div> 
+  //  End testimonial item 
+  //
+     </div>
+              <div class="swiper-pagination"></div>
+            </div>
+    
+          </div>
+        </section>End Testimonials Section  
+  |  -->
+
+  //  ======= Gallery Section ======= 
+  section#gallery.gallery
+    .container(data-aos="fade-up")
+      .section-title
+        h2 Gallery
+        p Check out photos of our different activities. Pictures say alot.
+      .gallery-slider.swiper
+        .swiper-wrapper.align-items-center
+          .swiper-slide
+            a.gallery-lightbox(href="assets/img/gallery/gallery-1.jpg")
+              img.img-fluid(src="assets/img/gallery/gallery-1.jpg", alt)
+          .swiper-slide
+            a.gallery-lightbox(href="assets/img/gallery/gallery-2.jpg")
+              img.img-fluid(src="assets/img/gallery/gallery-2.jpg", alt)
+          .swiper-slide
+            a.gallery-lightbox(href="assets/img/gallery/gallery-3.jpg")
+              img.img-fluid(src="assets/img/gallery/gallery-3.jpg", alt)
+          .swiper-slide
+            a.gallery-lightbox(href="assets/img/gallery/gallery-4.jpg")
+              img.img-fluid(src="assets/img/gallery/gallery-4.jpg", alt)
+          .swiper-slide
+            a.gallery-lightbox(href="assets/img/gallery/gallery-5.jpg")
+              img.img-fluid(src="assets/img/gallery/gallery-5.jpg", alt)
+          .swiper-slide
+            a.gallery-lightbox(href="assets/img/gallery/gallery-6.jpg")
+              img.img-fluid(src="assets/img/gallery/gallery-6.jpg", alt)
+          .swiper-slide
+            a.gallery-lightbox(href="assets/img/gallery/gallery-7.jpg")
+              img.img-fluid(src="assets/img/gallery/gallery-7.jpg", alt)
+          .swiper-slide
+            a.gallery-lightbox(href="assets/img/gallery/gallery-8.jpg")
+              img.img-fluid(src="assets/img/gallery/gallery-8.jpg", alt)
+        .swiper-pagination
+  //  End Gallery Section 
+  //  ======= Frequently Asked Questioins Section ======= 
+  section#faq.faq.section-bg
+    .container(data-aos="fade-up")
+      .section-title
+        h2 Frequently Asked Questioins
+        p Some of the frequently asked questions answered
+      ul.faq-list
+        li
+          .collapsed.question(data-bs-toggle="collapse", href="#faq1")
+            | Who gets cancer?
+            i.bi.bi-chevron-down.icon-show
+            i.bi.bi-chevron-up.icon-close
+          #faq1.collapse(data-bs-parent=".faq-list")
+            p.
+              
+              Anyone can get cancer, although the risk goes up with age. Your individual risk depends on factors such as whether you smoke, lifestyle choices such as what you eat and how much you exercise, your family history of cancer, and factors in your workplace and environment.
+              
+        li
+          .collapsed.question(data-bs-toggle="collapse", href="#faq2")
+            | Is cancer contagious? 
+            i.bi.bi-chevron-down.icon-show
+            i.bi.bi-chevron-up.icon-close
+          #faq2.collapse(data-bs-parent=".faq-list")
+            p.
+              
+              No. Cancer isn’t like the flu or a cold. You can’t catch cancer from someone who has the disease.
+              
+        li
+          .collapsed.question(data-bs-toggle="collapse", href="#faq3")
+            | Is there a vaccine for cancer? 
+            i.bi.bi-chevron-down.icon-show
+            i.bi.bi-chevron-up.icon-close
+          #faq3.collapse(data-bs-parent=".faq-list")
+            p.
+              
+              There is no vaccine for cancer. But there are vaccines for some viruses that are known to cause cancer, such as the human papillomavirus (HPV) and hepatitis B.
+              
+        li
+          .collapsed.question(data-bs-toggle="collapse", href="#faq4")
+            | How do cancer drugs work? 
+            i.bi.bi-chevron-down.icon-show
+            i.bi.bi-chevron-up.icon-close
+          #faq4.collapse(data-bs-parent=".faq-list")
+            p.
+              
+              Chemotherapy uses drugs to destroy cancer cells. But chemotherapy drugs can also harm healthy cells, leading to treatment side effects. Newer drugs, called targeted drugs, block genes or proteins found in the cancer cells. Targeted therapy usually causes less harm to healthy cells, but it still has side effects. Immunotherapy uses hormones and other drugs that work with your immune system to treat cancer.
+              
+        li
+          .collapsed.question(data-bs-toggle="collapse", href="#faq5")
+            | When should I get tested for cancer? 
+            i.bi.bi-chevron-down.icon-show
+            i.bi.bi-chevron-up.icon-close
+          #faq5.collapse(data-bs-parent=".faq-list")
+            p.
+              
+              Recommendations for the types of screening tests and the ages you should get them vary according to cancer type. So, it’s a good idea to have a conversation with your doctor about what type of test you might need and when.
+              
+  //  End Frequently Asked Questioins Section 
+//  End #main 
+//  ======= Footer ======= 
+footer#footer
+  .footer-top
+    .container
+      .row
+        .col-lg-3.col-md-6.footer-contact
+          h3 CancerApp
+          p
+            | 
+Kampala
+            br
+            | 
+Uganda
+            br
+            strong Phone:
+            |  +256 77777777
+            br
+            strong Email:
+            |  cancerapp@gmail.com
+            br
+            .col-lg-3.col-md-6.footer-links
+            h4 Useful Links
+            ul
+              li
+                i.bx.bx-chevron-right
+                |  
+                a(href="./index.html") Home
+              li
+                i.bx.bx-chevron-right
+                |  
+                a(href="./breastCancer.html") Breast Cancer
+              li
+                i.bx.bx-chevron-right
+                |  
+                a(href="./cervicalCancer.html") Cervical Cancer
+              li
+                i.bx.bx-chevron-right
+                |  
+                a(href="./prostateCancer.html") Prostate Cancer
+              li
+                i.bx.bx-chevron-right
+                |  
+                a(href="./throatCancer.html") Throat Cancer
+              li
+                i.bx.bx-chevron-right
+                |  
+                a(href="./contactform.html") Contact Us
+            .col-lg-3.col-md-6.footer-links
+              h4 Our Social Networks
+              p Connect with us through our social Media
+              .social-links.mt-3
+                a.twitter(href="#")
+                  i.bx.bxl-twitter
+                a.facebook(href="#")
+                  i.bx.bxl-facebook
+                a.instagram(href="#")
+                  i.bx.bxl-instagram
+                a.google-plus(href="#")
+                  i.bx.bxl-skype
+                a.linkedin(href="#")
+                  i.bx.bxl-linkedin
+            .container.footer-bottom.clearfix
+              .copyright
+      
+Copyright 
+      strong
+        span CancerApp
+      | . All Rights Reserved
+
+      .credits.
+      
+      
+//  End Footer 
+#preloader
+a.back-to-top.d-flex.align-items-center.justify-content-center(href="#")
+  i.bi.bi-arrow-up-short
+//  Vendor JS Files 
+script(src="assets/vendor/purecounter/purecounter.js")
+script(src="assets/vendor/aos/aos.js")
+script(src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js")
+script(src="assets/vendor/glightbox/js/glightbox.min.js")
+script(src="assets/vendor/swiper/swiper-bundle.min.js")
+script(src="assets/vendor/php-email-form/validate.js")
+//  Template Main JS File 
+script(src="https://code.jquery.com/jquery-3.5.1.js")
+// ---tweenmax.min.js cdn-------
+script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js")
+script(src="assets/js/main.js")

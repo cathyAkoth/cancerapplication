@@ -1,0 +1,313 @@
+meta(charset="utf-8")
+meta(content="width=device-width,initial-scale=1", name="viewport")
+title CervicalCancer
+meta(content, name="description")
+meta(content, name="keywords")
+//  Google Fonts 
+link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i", rel="stylesheet")
+//  Vendor CSS Files 
+link(href="assets/vendor/fontawesome-free/css/all.min.css", rel="stylesheet")
+link(href="assets/vendor/animate.css/animate.min.css", rel="stylesheet")
+link(href="assets/vendor/aos/aos.css", rel="stylesheet")
+link(href="assets/vendor/bootstrap/css/bootstrap.min.css", rel="stylesheet")
+link(href="assets/vendor/bootstrap-icons/bootstrap-icons.css", rel="stylesheet")
+link(href="assets/vendor/boxicons/css/boxicons.min.css", rel="stylesheet")
+link(href="assets/vendor/glightbox/css/glightbox.min.css", rel="stylesheet")
+link(href="assets/vendor/swiper/swiper-bundle.min.css", rel="stylesheet")
+//  Template Main CSS File 
+link(href="assets/css/breastCancer.css", rel="stylesheet")
+link(href="assets/css/cancer.css", rel="stylesheet")
+//  ======= Header ======= 
+header#header.fixed-top
+  .container.d-flex.align-items-center
+    h1.logo.me-auto
+      a(href="index.html") Cancer App
+    nav#navbar.navbar.order-last.order-lg-0
+      ul
+        li
+          a.nav-link.scrollto(href="/") Home
+        li
+          a.nav-link.scrollto(href="#about") About
+        li
+          a.nav-link.scrollto(href="/cervicalcancer") Cervical cancer
+        li
+          a.nav-link.scrollto(href="/breastcancer") Breast cancer
+        li
+          a.nav-link.scrollto(href="/prostatecancer") Prostate cancer
+        li
+          a.nav-link.scrollto(href="/throatcancer") Throat cancer
+      i.bi.bi-list.mobile-nav-toggle
+    //  .navbar 
+//  End Header 
+section#hero1
+  .hero-container1(data-aos="zoom-in", data-aos-delay="100")
+    h1.mb-4.pb-0
+      | Let's Talk About
+      br
+      span Cervical
+      |  Cancer
+    a.glightbox.play-btn.mb-4(href="https://www.youtube.com/watch?v=CVj19sMBuds")
+//  ======= About Section ======= 
+section#about.about
+  .container(data-aos="fade-up")
+    .section-header
+      h2 What Is Cervical Cancer?
+      p
+        | Breast cancer is an uncontrolled growth of breast cells. Cervical cancer is a type of cancer that occurs in the cells of the cervix — the lower part of the uterus that connects to the vagina.
+
+        br
+        span
+          | Various strains of the human papillomavirus (HPV), a sexually transmitted infection, play a role in causing most cervical cancer. When exposed to HPV, the body's immune system typically prevents the virus from doing harm. In a small percentage of people, however, the virus survives for years, contributing to the process that causes some cervical cells to become cancer cells.
+
+          br
+          br
+          span You can reduce your risk of developing cervical cancer by having screening tests and receiving a vaccine that protects against HPV infection
+//  End About Section 
+section#cta.cta1
+  .container(data-aos="zoom-out")
+    .row.g-5
+      .col-lg-8.col-md-6.content.d-flex.flex-column.justify-content-center.order-last.order-md-first
+        h3
+          | Risk 
+          em Factors
+          |  of Cervical Cancer(Causes).
+        h2 Many sexual partners.
+        p.
+          The greater your number of sexual partners — and the greater your partner's number of sexual partners — the greater your chance of acquiring HPV.
+          
+        h2 Early sexual activity.
+        p Having sex at an early age increases your risk of HPV.
+        h2 Other sexually transmitted infections (STIs).
+        p.
+          Having other STIs — such as chlamydia, gonorrhea, syphilis and HIV/AIDS — increases your risk of HPV.
+          
+        h2 A weakened immune system.
+        p You may be more likely to develop cervical cancer if your immune system is weakened by another health condition and you have HPV.
+        h2 Smoking.
+        p Smoking is associated with squamous cell cervical cancer.
+        h2 Exposure to miscarriage prevention drug.
+        p If your mother took a drug called diethylstilbestrol (DES) while pregnant in the 1950s, you may have an increased risk of a certain type of cervical cancer called clear cell adenocarcinoma
+      .col-lg-4.col-md-6.order-first.order-md-last.d-flex.align-items-center
+        .img
+          img.img-fluid(src="assets/img/doctors/doctors-3.jpg", alt)
+//  ======= About Us Section ======= 
+section#about.about1
+  .container(data-aos="fade-up")
+    .section-title
+      h2 Syptoms/Signs of Cervical Cancer
+    .row.content
+      .col-lg-6
+        p.
+          
+          Early-stage cervical cancer generally produces no signs or symptoms.
+          
+        br
+        h4 Signs and symptoms of more-advanced cervical cancer include:
+        ul
+          li
+            i.ri-check-double-line
+            |  Vaginal bleeding after intercourse, between periods or after menopause
+          li
+            i.ri-check-double-line
+            |  Watery, bloody vaginal discharge that may be heavy and have a foul odor
+
+          li
+            i.ri-check-double-line
+            |  Pelvic pain or pain during intercourse
+      .col-lg-3.pt-4.pt-lg-0
+        img.img-fluid(src="assets/img/doctors/doctors-4.jpg", alt)
+      .col-lg-3.pt-4.pt-lg-0
+        img.img-fluid(src="assets/img/doctors/doctors-3.jpg", alt)
+        br
+        br
+//  End About Us Section 
+//  ======= Gallery Section ======= 
+section#gallery.gallery
+  .container(data-aos="fade-up")
+    .section-title
+      h2 Gallery
+    .gallery-slider.swiper
+      .swiper-wrapper.align-items-center
+        .swiper-slide
+          a.gallery-lightbox(href="assets/img/doctors/doctors-4.jpg")
+            img.img-fluid(src="assets/img/gallery/gallery-1.jpg", alt)
+        .swiper-slide
+          a.gallery-lightbox(href="assets/img/departments-4.jpg")
+            img.img-fluid(src="assets/img/gallery/gallery-2.jpg", alt)
+        .swiper-slide
+          a.gallery-lightbox(href="assets/img/gallery/gallery-3.jpg")
+            img.img-fluid(src="assets/img/gallery/gallery-3.jpg", alt)
+        .swiper-slide
+          a.gallery-lightbox(href="assets/img/gallery/gallery-4.jpg")
+            img.img-fluid(src="assets/img/gallery/gallery-4.jpg", alt)
+        .swiper-slide
+          a.gallery-lightbox(href="assets/img/gallery/gallery-5.jpg")
+            img.img-fluid(src="assets/img/gallery/gallery-5.jpg", alt)
+        .swiper-slide
+          a.gallery-lightbox(href="assets/img/gallery/gallery-6.jpg")
+            img.img-fluid(src="assets/img/gallery/gallery-6.jpg", alt)
+        .swiper-slide
+          a.gallery-lightbox(href="assets/img/gallery/gallery-7.jpg")
+            img.img-fluid(src="assets/img/gallery/gallery-7.jpg", alt)
+        .swiper-slide
+          a.gallery-lightbox(href="assets/img/gallery/gallery-8.jpg")
+            img.img-fluid(src="assets/img/gallery/gallery-8.jpg", alt)
+      .swiper-pagination
+//  End Gallery Section 
+//  ======= F.A.Q Section ======= 
+section#faq.faq
+  .container-fluid(data-aos="fade-up")
+    .row.gy-4
+      .col-lg-7.d-flex.flex-column.justify-content-center.align-items-stretch.order-2.order-lg-1
+        .content.px-xl-5
+          h3
+            | Frequently Asked 
+            strong Questions
+          p.
+            
+            Some questions that are frequently being asked.
+            
+        .accordion.accordion-flush.px-xl-5#faqlist
+          .accordion-item(data-aos="fade-up", data-aos-delay="200")
+            h3.accordion-header
+              button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#faq-content-1")
+                i.bi.bi-question-circle.question-icon
+                | 
+How long does it take for cervical cancer to develop?
+
+            #faq-content-1.accordion-collapse.collapse(data-bs-parent="#faqlist")
+              .accordion-body.
+                
+                Cervical cancer begins to develop when normal cells in the lower portion of the uterus change or mutate. They first become pre-cancerous. When pre-cancerous cells grow out of control, they may spread to nearby tissue, as well as other parts of the body, and if left untreated, they may grow into a mass, or tumor.
+                
+          
+            .accordion-item(data-aos="fade-up", data-aos-delay="300")
+            h3.accordion-header
+              button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#faq-content-2")
+                i.bi.bi-question-circle.question-icon
+                | 
+Should I consider preventive surgeries if I have risk factors for cervical cancer?
+
+            #faq-content-2.accordion-collapse.collapse(data-bs-parent="#faqlist")
+              .accordion-body.
+                
+                Unlike with breast or ovarian cancer, there is no recommended prophylactic surgical procedure to prevent cervical cancer. But one important step women can take is to follow medical screening guidelines, which call for getting a Pap smear every three years for women aged 21 to 29, and getting tested for HPV beginning at age 30—and to get the HPV vaccine.
+                
+         
+            .accordion-item(data-aos="fade-up", data-aos-delay="400")
+            h3.accordion-header
+              button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#faq-content-3")
+                i.bi.bi-question-circle.question-icon
+                | 
+Will I need surgery?
+
+            #faq-content-3.accordion-collapse.collapse(data-bs-parent="#faqlist")
+              .accordion-body.
+                
+                Surgery to remove the cancer is often part of the treatment regimen for women with cervical cancer. Surgery may be combined with chemotherapy and/or radiation or targeted therapy. Ask your doctor about the specific treatment options available to you
+                
+         
+            .col-lg-5.align-items-stretch.order-1.order-lg-2.img(style="background-image: url('/assets/cancerimages/CervicalCancer/images(1))';")  
+
+section#cta.cta
+  .container(data-aos="zoom-in")
+    .text-center
+      h3
+        | WHEN TO SEE A DOCTOR
+
+        p
+      h4
+        span.
+          Make an appointment with your doctor if you have any signs or symptoms that concern you. If you dont have a doctor, contact us for a referral near you
+          
+      p
+      a.cta-btn(href="#") Contact Us
+//  End #main 
+//  ======= Footer ======= 
+footer#footer
+  .footer-top
+    .container
+      .row
+        .col-lg-3.col-md-6.footer-contact
+          h3 CancerApp
+          p
+            | 
+Kampala
+            br
+            | 
+Uganda
+            br
+            strong Phone:
+            |  +256 77777777
+            br
+            strong Email:
+            |  cancerapp@gmail.com
+            br
+            .col-lg-3.col-md-6.footer-links
+            h4 Useful Links
+            ul
+            li
+              i.bx.bx-chevron-right
+              |  
+              a(href="./index.html") Home
+            li
+              i.bx.bx-chevron-right
+              |  
+              a(href="./breastCancer.html") Breast Cancer
+            li
+              i.bx.bx-chevron-right
+              |  
+              a(href="./cervicalCancer.html") Cervical Cancer
+            li
+              i.bx.bx-chevron-right
+              |  
+              a(href="./prostateCancer.html") Prostate Cancer
+            li
+              i.bx.bx-chevron-right
+              |  
+              a(href="./throatCancer.html") Throat Cancer
+            li
+              i.bx.bx-chevron-right
+              |  
+              a(href="#") Contact Us
+            .col-lg-3.col-md-6.footer-links
+            h4 Our Social Networks
+            p Connect with us through our social Media
+            .social-links.mt-3
+            a.twitter(href="#")
+              i.bx.bxl-twitter
+            a.facebook(href="#")
+              i.bx.bxl-facebook
+            a.instagram(href="#")
+              i.bx.bxl-instagram
+            a.google-plus(href="#")
+              i.bx.bxl-skype
+            a.linkedin(href="#")
+              i.bx.bxl-linkedin
+            .container.footer-bottom.clearfix
+            .copyright
+   
+            Copyright 
+                  strong
+                    span CancerApp
+                  | . All Rights Reserved
+
+                  .credits.
+      
+      
+//  End Footer 
+#preloader
+a.back-to-top.d-flex.align-items-center.justify-content-center(href="#")
+  i.bi.bi-arrow-up-short
+//  Vendor JS Files 
+script(src="assets/vendor/purecounter/purecounter.js")
+script(src="assets/vendor/aos/aos.js")
+script(src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js")
+script(src="assets/vendor/glightbox/js/glightbox.min.js")
+script(src="assets/vendor/isotope-layout/isotope.pkgd.min.js")
+script(src="assets/vendor/swiper/swiper-bundle.min.js")
+script(src="assets/vendor/php-email-form/validate.js")
+//  Template Main JS File 
+script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js")
+script(src="assets/js/main.js")
+script(src="assets/js/cancer.js")

@@ -1,0 +1,29 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
+link(rel="stylesheet", href="./assets/css/login.css")
+link(rel="stylesheet", href="./assets/css/breastCancer.css")
+link(href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap", rel="stylesheet")
+title Login page
+section.side
+  img(src="./assets/img/doctors-2-removebg-preview.png", alt)
+section.main
+  .login-container
+    p.title Welcome back
+    .separator
+    p.welcome-message
+      | Don't Have an account 
+      span
+        a(href="/signup") Register Here
+    form.login-form
+      .form-control
+        input#email(type="email", name="email", placeholder="email")
+        i.fas.fa-user
+      .form-control
+        input#password(type="password", name="password", placeholder="Password")
+        i.fas.fa-lock
+      .buttons
+        button.submit
+          a(href="/hospitalDashboard") Login
+        button.submit1
+          a(href="/") Cancel

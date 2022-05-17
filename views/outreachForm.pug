@@ -1,0 +1,93 @@
+doctype html
+// Created By CodingLab - www.codinglabweb.com
+html(lang='en', dir='ltr')
+  head
+    meta(charset='UTF-8')
+    // -<title> Responsive Registration Form | CodingLab </title>-
+    link(rel='stylesheet', href='../public/css/studentForm.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+    .container
+      .description
+        h1 DESCRIPTION OF QUESTIONS
+        p Write the date on the first blank row, nothing else is witten on that row
+        h2 SECTION A: Description
+      .content
+        form(method='POST', action='/', name='Form')
+          .user-details
+            .input-box
+              span.details(for='date') 1.Date: Write the date of screening:
+              input#date(type='date',name='date', required='')
+            .input-box
+              span.details(for='location') location of outreach
+              input#location(type='text',name='location', required='')
+            .input-box
+              span.details(for='serialNo') 2.Serial No
+              input#serialNo(type='text',name='serialNo' , required='')
+            .input-box
+              span.details(for='clientNo') 3.Client No
+              input#clientNo(type='text',name='clientNo',  required='')
+            .input-box
+              span.details(for='name') 4.Name
+              input#name(type='text',name='name',  required='')
+            .input-box
+              span.details(for='age') 5.Age
+              input#age(type='text',name='age',  required='')
+            .input-box
+              span.details(for='sex') 6.sex
+              input#sex(type='text',name='sex',  required='')
+            .input-box
+                span.details(for='nin') 7.NIN
+                input#nin(type='text',name='nin',  required='')
+            .input-box
+              span.details(for='clientcategory') 8.Client Category
+              span.details(for='clientcategory') National
+              input#national(type='checkbox',name='national', value='national')
+              span.details(for='clientcategory') Refugee
+              input#refugee(type='checkbox',name='refugee', value='refugee')
+              span.details(for='foreigner') Foreigner 
+              input#foreigner(type='checkbox',name='foreigner', value='foreigner')
+              br
+              br
+            .input-box
+            
+              span.details(for='address') 9.Address
+              input#address(type='text',name='address', required='')
+            .input-box
+              span.details(for='district') District
+              input#district(type='text',name='district' , required='')
+            .input-box
+              span.details(for='subcounty') Sub-county
+              input#subcounty(type='text',name='subcounty',  required='')
+            .input-box
+              span.details(for='village') Village
+              input#village(type='text',name='village',  required='')
+            .input-box
+              span.details(for='parish') Parish
+              input#parish(type='text',name='parish',  required='')
+            .input-box
+              span.details(for='tribe') Tribe/Religion
+              input#tribe(type='text',name='tribe',  required='')
+            .input-box
+                span.details(for='occupation') Occupation
+                input#occupation(type='text',name='occupation',  required='')
+            .input-box
+              span.details(for='phone') 10.Phone Number
+              input#phone(type='text',name='phone' , required='')
+            
+            .input-box
+              span.details(for='riskfactor') 10.Risk Factor
+              span.details(for='riskfactor') Smoking
+              input#smoking(type='checkbox',name='smoking', value='smoking')
+              span.details(for='riskfactor') Alcohol
+              input#alcohol(type='checkbox',name='alcohol', value='alcohol')
+              span.details(for='riskfactor') HIV Pos 
+              input#status(type='checkbox',name='status', value='status')
+              br
+              br
+            
+
+              
+           
+          .button
+            input(type='submit', value='Register')
