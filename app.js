@@ -20,17 +20,17 @@ const { WELCOME_MESSAGE, DATABASE_URL } = process.env
 const outreachFormRoutes = require("./routes/outreachFormRoute")
 
 
-const driverRegRoutes = require("./routes/specialistRoute")
+
 const indexnewRoutes = require("./routes/indexnewRoute")
 const breastCancerRoutes = require("./routes/breastCancerRoute")
-const specialistRegRoutes = require("./routes/specialistRoute")
+
 const cervicalCancerRoutes = require("./routes/cervicalCancerRoute")
 const throatCancerRoutes = require("./routes/throatCancerRoute")
 const prostateCancerRoutes = require("./routes/prostateCancerRoute")
 const loginRoutes = require("./routes/loginRoutes")
 const signupRoutes = require("./routes/signupRoute")
 const hospitalRoutes = require("./routes/hospitalRoutes")
-
+const specialistRegRoutes = require("./routes/specialistRegRoute")
 
 
 
@@ -54,8 +54,8 @@ app.use(passport.session());
 
 
 app.use('/',outreachFormRoutes);
+app.use('/specialist', specialistRegRoutes);
 
-app.use('/specialistReg', driverRegRoutes);
 app.use('/outreachForm',outreachFormRoutes);
 app.use('/specialist', specialistRegRoutes);
 app.use('/', indexnewRoutes);

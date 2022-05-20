@@ -1,21 +1,7 @@
-html
-  head
+extends layout 
+block content
     
-    meta(charset="UTF-8")
-    meta(name="viewpoint" content="=*width=device-width, initial-scale=1.0*")
-    meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    block scripts
-    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl', crossorigin='anonymous')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-    link(rel='stylesheet', href='https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css')
-    link(rel='stylesheet', href='/css/style.css') 
-    //- link(rel='stylesheet', href='style1.css') 
-    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN', crossorigin='anonymous')    
-    link(rel='shortcut icon', type='image/png', href='/public/images/favicon.png')
-    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl', crossorigin='anonymous')
-    
-    
-    title register specialist
+    title specialist
     
     link(rel='stylesheet', href='/css/pugForm.css')
       
@@ -24,10 +10,9 @@ html
           header
             h2
               .header-title
-                img#logoArea(src="/images/signage2.png")
-                label(for='')
                 
-                |              
+                
+                |                 Cancer App
     
         
           .container-fluid
@@ -37,20 +22,20 @@ html
             
             .col-5
               .card 
-                
+                h5 Specialist Registration Form 
                 .card-body 
                 
-                  form(method='POST',action='/specialistReg/specialistReg', name='Form')
+                  form(method='POST',action='/specialist/specialistReg', name='specialistRegForm')
                     
                     label(for='fname') First Name
                     |         
-                    input#fname(type='text', name='firstname', placeholder=" First Name")
+                    input#fname(type='text', name='fname')
                     p.fname_info.warnP|     
                     |         
                     
                     label(for='lname') Last Name
                     |         
-                    input#lname(type='text', name='lastname', placeholder=" Last Name")
+                    input#lname(type='text', name='lname')
                     p.lname_info.warnP|     
                     |         
                     
@@ -64,35 +49,33 @@ html
                       |         
                       option(value='Male') Male
                     p.gender_info.warnP
-                    label(for='gender') Specialisation
-                    |   
-                    select#specialisation(name='specialisation')
+                    label(for='specialisation') Specialisation
+                    select#specialisation(name='specialisation') specialisation
                       option(value='')
                       |  
                       |         
-                      option(value='throat') Throat Cancer
+                      option(value='Breast') Breast Cancer
                       |         
-                      option(value='breast') Breast Cancer
-                    p.gender_info.warnP
+                      option(value='Throat') Throat Cancer
+                      option(value='Cervical') Cervical Cancer
+                      |         
+                      option(value='Prostate') Prostate Cancer
+                    p.specialisation_info.warnP
                     
-                    label(for='location') Location
-
-                    input#location(type='text',name='location')
+                    label(for='location') Location:              
+                    input#location(type='location', name='location')
+                    p.location_info.warnP|     
                     |         
-                    p.age_info.warnP
                     
-                        
-                    
-                    label(for='telephoneNo') phone Number
+                    label(for='telephoneNo') Contact
                     input#telephoneNo(type='string', name='telephoneNo')
                     p.telephoneNo_info.warnP
 
-                    label(for='nin') Email    
-                    input#email(type='text', name='email', placeholder="email", *='')
+                    label(for='email') Email   
+                    input#email(type='email', name='email', *='')
                     p.nin_info.warnP|     
                     |         
                     
-                              
                       
 
                   
@@ -101,6 +84,6 @@ html
                     input(type='submit', value='Submit')
               .col-4
             script.
-            
+            script(src='/javascript/specialistVal.js')
             script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
             script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js', integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0', crossorigin='anonymous')
