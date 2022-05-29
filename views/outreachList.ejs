@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>fetch data from mongodb using node js and display in html</title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+ 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -36,11 +36,11 @@
         <td><%= users[i].nin%></td>
         <td><%= users[i].age%></td>
         <td>
-            <a href='/outreachform/update/'+users._id> <button>update</button></a>
+            <a href='/outreachform/update/+<%= users._id %>'></a> <button>update</button></a>
         </td>
         <td>
             <form method="Post" action="/outreachForm/delete">
-                <input type="hidden", name="id", value= "users._id">
+                <input type="hidden", name="id", value= "<%= users._id %>">
                 <button>Delete</button>
             </form>
         </td>
@@ -54,10 +54,12 @@
     <% } %>    
     
     <td>
-        <a href="/outreachForm/update/'+user._id"> <button>update</button></a>
+        <a href="/outreachForm/update/'users._id"> <button>update</button></a>
     </td>
     
 </tbody>
 </table>
+
+
 </body>
 </html>
