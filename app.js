@@ -49,6 +49,7 @@ app.use(passport.session());
 app.use("/api/auth", require("./Auth/route"));
 
 app.get("/", (req, res) => res.render('index'));
+app.get("/blog", (req, res) => res.render('blogposts'));
 app.get("/users", (req, res) => res.render('admin'));
 app.get("/breastcancer", (req, res) => res.render('b'));
 //app.get("/specialistform", (req, res) => res.render('specialistform'));
