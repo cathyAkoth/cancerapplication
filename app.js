@@ -13,24 +13,15 @@ const expressSession = require('express-session')({
 
 
 
+const cookieParser = require("cookie-parser");
+const { adminAuth, userAuth , specialistAuth } = require("./middleware/auth.js");
+
 const { PORT } = process.env || 4000 
 const { WELCOME_MESSAGE, DATABASE_URL } = process.env
 
-
 const outreachFormRoutes = require("./routes/outreachFormRoute")
+const specialistRoutes = require ("./routes/specialistRoute")
 
-
-
-const indexnewRoutes = require("./routes/indexnewRoute")
-const breastCancerRoutes = require("./routes/breastCancerRoute")
-
-const cervicalCancerRoutes = require("./routes/cervicalCancerRoute")
-const throatCancerRoutes = require("./routes/throatCancerRoute")
-const prostateCancerRoutes = require("./routes/prostateCancerRoute")
-const loginRoutes = require("./routes/loginRoutes")
-const signupRoutes = require("./routes/signupRoute")
-const hospitalRoutes = require("./routes/hospitalRoutes")
-const specialistRegRoutes = require("./routes/specialistRegRoute")
 
 
 
@@ -38,6 +29,10 @@ const specialistRegRoutes = require("./routes/specialistRegRoute")
 const app = express();
 
 // load middleware
+app.use(express.json());
+app.use(cookieParser());
+
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true }))
 
@@ -51,21 +46,33 @@ app.use(passport.session());
 
 
 
+app.use("/api/auth", require("./Auth/route"));
 
+app.get("/", (req, res) => res.render('index'));
+app.get("/users", (req, res) => res.render('admin'));
+app.get("/breastcancer", (req, res) => res.render('b'));
+//app.get("/specialistform", (req, res) => res.render('specialistform'));
+app.get("/contact", (req, res) => res.render('contactForm'));
+app.get("/cervicalcancer", (req, res) => res.render('cervicalCancer'));
+app.get("/patient" , (req, res) => res.render('patientDahboard'));
+app.get("/throatcancer", (req, res) => res.render('throatcancer'));
+app.get("/hospital", (req, res) => res.render('hospitalDashboard'));
+app.get("/specialist", (req, res) => res.render('speclialist'));
+app.get("/referral", (req, res) => res.render('referralForm'));
+app.use('/outreachform',outreachFormRoutes);
+app.use("/specialistReg",specialistRoutes );
+app.get("/prostatecancer", (req, res) => res.render('prostateCancer'));
+app.get("/register", (req, res) => res.render("register"));
+app.get("/login", (req, res) => res.render("login"));
+app.get("/logout", (req, res) => {
+  res.cookie("jwt", "", { maxAge: "1" });
+  res.redirect("/");
+});
+app.get("/admin", adminAuth, (req, res) => res.render("hospitalDashboard"));
+app.get("/spec", specialistAuth, (req, res) => res.render("speclialist"));
 
-app.use('/',outreachFormRoutes);
-app.use('/specialist', specialistRegRoutes);
+app.get("/basic", userAuth, (req, res) => res.render("patientDahboard"));
 
-app.use('/outreachForm',outreachFormRoutes);
-app.use('/specialist', specialistRegRoutes);
-app.use('/', indexnewRoutes);
-app.use('/breastcancer', breastCancerRoutes);
-app.use('/cervicalcancer', cervicalCancerRoutes);
-app.use('/throatcancer', throatCancerRoutes);
-app.use('/prostatecancer', prostateCancerRoutes);
-app.use('/login', loginRoutes);
-app.use('/signup', signupRoutes)
-app.use('/hospitalDashboard', hospitalRoutes);
 
 
 
@@ -81,5 +88,6 @@ mongoose.connect(DATABASE_URL).then(() => {
     console.error("Failed to start the server due to : ",error)
 })
 
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
+//app.set('view engine', 'pug');
 app.set('views', './views');

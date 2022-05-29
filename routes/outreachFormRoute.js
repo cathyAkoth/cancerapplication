@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const  OutreachForm = require('../models/OutreachForm');
+const  OutreachForm = require('../model/OutreachForm');
 
 
-router.get('/get', (req, res) => {
+router.get('/', (req, res) => {
      
-  res.render('outreachForm');
+  res.render('outreachform');
 
 });
 
@@ -17,7 +17,7 @@ router.get('/get', (req, res) => {
     const outreachForm = new OutreachForm (req.body);
     
     await outreachForm.save()
-    res.redirect('/outreachForm/outreach')
+    res.redirect('/outreachform/outreach')
     }catch(err){
       console.log(err);
       res.send('oops something went wrong')
@@ -42,7 +42,7 @@ router.get('/get', (req, res) => {
    // Obtaining data to be updated.
    router.get('/update/:id', async (req, res) => {
     try {
-        const updateOut = await OutreachForm.findOne({ _id: req.params.id })
+        const updateOut = await Outreachform.findOne({ _id: req.params.id })
         res.render('updateoutreach', { user: updateOut })
     } catch (err) {
         res.status(400).send("Unable to find item in the database");
@@ -53,8 +53,8 @@ router.get('/get', (req, res) => {
 // Route to save the updated data.
 router.post('/update', async (req, res) => {
   try {
-      await OutreachForm.findOneAndUpdate({_id:req.query.id}, req.body)
-      res.redirect('/outreachForm/outreach');
+      await Outreachform.findOneAndUpdate({_id:req.query.id}, req.body)
+      res.redirect('/outreachform/outreach');
   } catch (err) {
       res.status(404).send("Unable to update item in the database");
   }

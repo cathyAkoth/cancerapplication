@@ -1,24 +1,24 @@
 // Iniialisation and Imporatation.
 const express = require('express');
 const router = express.Router();
-const SpecialistReg = require('../Models/SpecialistReg');
+const SpecialistReg = require('../Model/SpecialistReg');
 
 
-router.get('/specialistReg', (req, res) => {
+router.get('/', (req, res) => {
   if (req.session) {   
-  res.render('specialistReg');
+  res.render('specialistform');
   }
 });
 
  
-  router.post('/specialistReg', async(req, res) => { 
+  router.post('/', async(req, res) => { 
     if (req.session) {
     try{
     console.log(req.body)
     const specialistReg = new SpecialistReg(req.body);
     
     await specialistReg.save()
-    res.redirect('/specialistReg')
+    res.redirect('/specialistReg/specialistList')
     }catch(err){
       console.log(err);
       res.send('oops something went wrong')
@@ -28,7 +28,7 @@ router.get('/specialistReg', (req, res) => {
     })
 
    
-    router.get('/', async (req, res) => {
+    router.get('/specialistList', async (req, res) => {
       try {
        
         let specialistRegDetails = await SpecialistReg.find();
