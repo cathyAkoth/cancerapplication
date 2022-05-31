@@ -4,6 +4,12 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
 
+const expressLayouts = require('express-ejs-layouts');
+const fileUpload = require('express-fileupload');
+const session = require('express-session');
+
+const flash = require('connect-flash');
+
 //Require express session inorder to monitor authentication.
 const expressSession = require('express-session')({
   secret: 'secret',
@@ -21,7 +27,7 @@ const { WELCOME_MESSAGE, DATABASE_URL } = process.env
 
 const outreachFormRoutes = require("./routes/outreachFormRoute")
 const specialistRoutes = require ("./routes/specialistRoute")
-
+const routes = require("./routes/recipeRoutes")
 
 
 
@@ -35,7 +41,8 @@ app.use(cookieParser());
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true }))
-
+app.use(flash());
+app.use(fileUpload());
 app.use(express.static('public'));
 app.use('/public/images', express.static(__dirname + '/public/images'));
 
@@ -47,9 +54,9 @@ app.use(passport.session());
 
 
 app.use("/api/auth", require("./Auth/route"));
+app.use('/', routes);
+app.get("/home", (req, res) => res.render('index1'));
 
-app.get("/", (req, res) => res.render('index'));
-app.get("/blog", (req, res) => res.render('blogposts'));
 app.get("/users", (req, res) => res.render('admin'));
 app.get("/breastcancer", (req, res) => res.render('b'));
 //app.get("/specialistform", (req, res) => res.render('specialistform'));
@@ -88,7 +95,7 @@ mongoose.connect(DATABASE_URL).then(() => {
 }).catch(error => {
     console.error("Failed to start the server due to : ",error)
 })
-
+app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
 //app.set('view engine', 'pug');
 app.set('views', './views');
