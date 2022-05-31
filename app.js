@@ -74,7 +74,7 @@ app.get("/register", (req, res) => res.render("register"));
 app.get("/login", (req, res) => res.render("login"));
 app.get("/logout", (req, res) => {
   res.cookie("jwt", "", { maxAge: "1" });
-  res.redirect("/");
+  res.redirect("/home");
 });
 app.get("/admin", adminAuth, (req, res) => res.render("hospitalDashboard"));
 app.get("/spec", specialistAuth, (req, res) => res.render("speclialist"));

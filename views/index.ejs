@@ -119,7 +119,7 @@
   </div>
 
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-    <% if(typeof food.breastCancer !== 'undefined' && food.thai.length > 0) { %>
+    <% if(typeof food.breast !== 'undefined' && food.thai.length > 0) { %>
       <% food.thai.forEach(function(recipe, index){ %>
       <a href="/recipe/<%= recipe._id %>" class="col text-center category__link">
         <div class="category__img category__img--large shadow">
@@ -143,7 +143,7 @@
   </div>
 
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-    <% if(food.throatcancer != '') { %>
+    <% if(food.throat != '') { %>
       <% food.american.forEach(function(recipe, index){ %>
       <a href="/recipe/<%= recipe._id %>" class="col text-center category__link">
         <div class="category__img category__img--large shadow">
@@ -162,12 +162,12 @@
 <!-- Chinese Recipes -->
 <section class="pb-4 pt-4">
   <div class="d-flex mb-2 align-items-center">
-    <h2>cervicalCancer Articles</h2>
+    <h2>cervical cancer Articles</h2>
     <a href="/categories/American" class="ms-auto">View More</a>
   </div>
 
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-    <% if(food.cervicalCancer != '') { %>
+    <% if(food.cervical != '') { %>
       <% food.chinese.forEach(function(recipe, index){ %>
       <a href="/recipe/<%= recipe._id %>" class="col text-center category__link">
         <div class="category__img category__img--large shadow">
