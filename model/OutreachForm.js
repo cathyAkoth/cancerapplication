@@ -49,6 +49,9 @@ const outreachFormSchema = new mongoose.Schema({
       type: String,
       //required: 'please fill in',
   },
+  dob:{
+    type: Date,
+  },
   subcounty:{
     type: String,
     //required:'please select',
@@ -74,11 +77,44 @@ const outreachFormSchema = new mongoose.Schema({
   },
   riskfactor:{
     type: String,
+    findings:{
+      type: String,
+      immutable: true
+      //required: 'please fill in',
+    },
+    tests:{
+      type: String,
+      immutable: true
+    },
+    result:{
+      type: String,
+      immutable: true
+    },
+    lesionsize:{
+     type: String,
+     immutable: true
+    },
+    referredTo:{
+      type: String,
+      immutable: true
+      //required: 'please fill in',
+    },
+    followUpDate:{
+      type: String,
+      immutable: true
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now()
+      
+      
+    }
+    
+    
+    
+         
+         
   }
- 
- 
-  
-  
 
 
   

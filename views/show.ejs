@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script type="text/javascript">
+        function exportToExcel(tableID, filename = ''){
+            var downloadurl;
+            var dataFileType = 'application/vnd.ms-excel';
+            var tableSelect = document.getElementById(tableID);
+            var tableHTMLData = tableSelect.outerHTML.replace(/ /g, '%20');
+            
+            // Specify file name
+            filename = filename?filename+'.xls':'export_excel_data.xls';
+            
+            // Create download link element
+            downloadurl = document.createElement("a");
+            
+            document.body.appendChild(downloadurl);
+            
+            if(navigator.msSaveOrOpenBlob){
+                var blob = new Blob(['\ufeff', tableHTMLData], {
+                    type: dataFileType
+                });
+                navigator.msSaveOrOpenBlob( blob, filename);
+            }else{
+                // Create a link to the file
+                downloadurl.href = 'data:' + dataFileType + ', ' + tableHTMLData;
+            
+                // Setting the file name
+                downloadurl.download = filename;
+                
+                //triggering the function
+                downloadurl.click();
+            }
+        }
+
+</script>
+</head>
+
+<body>
+    
+    <div class="container">
+        <ul>
+            <li><a class="" href="http://localhost:8080/">Home</a></li>
+            <li><a href="/show">Show</a></li>
+            
+          </ul>
+          
+        <table id="tblexportData" class="table">
+            <!--   The Head of The Table -->
+                   <thead>
+                       <tr>
+                           <th>ID</th>   
+                             
+                           <th>date</th>
+                           <th>Location</th>
+                           <th>serialNo</th>
+                           <th>ClientNo</th>           
+                           <th>Name</th> 
+                           <th>Age</th>
+                           <th>Sex</th>
+                       </tr>
+            <!--  End of The Head -->
+                   </thead>
+        
+               
+                   <tbody>
+                  <% students.forEach((student)=>{%>
+                    <tr>
+                        <td><%- student._id %></td>
+                        <td><%- student.createdAt %></td>
+                        <td><%- student.location %></td>
+                        <td><%- student.serialNo %></td>
+                        <td><%- student.clientNumber %></td>
+                        <td><%- student.name %></td>
+                        <td><%- student.age %></td>
+                        <td><%- student.sex %></td>
+                        <td>
+                            <a href="/edit/<%= student._id %>">
+                                <span class="blue">View</span></a> 
+
+                             <a href="/delete/<%= student._id %>">
+                                 <span class="pink">Delete</span></a>
+                          </td>
+                    </tr>
+                
+                
+              <%  }) %>  
+                    
+            <!-- End of The of The Table -->
+                  </tbody>
+            <!-- End of The Table -->
+          </table>
+          <button onclick="exportToExcel('tblexportData', 'user-data')" class="btn btn-success">Export Table Data To Excel File</button> 
+    </div>
+
+
+
+</body>
+</html>

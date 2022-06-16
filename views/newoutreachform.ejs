@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="/assets/css/newoutreachform.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+   
+<body>
+    
+        
+  <div class="container">
+
+    <div class="title">Consultation Form</div>
+    <div class="content">
+
+        <form method="post" action="/add" name="outreachForm">
+            <div class="formclass">
+                <h2>MINISTRY OF HEALTH AND UGANDA CANCER INSTITUTE</h2>
+                <div class="description">
+                    <h2>DESCRIPTION OF QUESTIONS</h2>
+                    
+                    <h2>SECTION A: Description </h2>
+                </div>
+        
+            <div class="user-details">
+          <div class="input-box1">
+            <span class="details">Location Of Outreach</span>
+            <input type="textarea" id="location" name="location" placeholder="Location of Outreach" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Full Names</span>
+            <input type="name" id="name" name="name" placeholder="Enter your Full Names" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="date" id="dob" name="dob" placeholder="Enter your Date of Birth" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Age</span>
+            <input type="text" id="age" name="age" placeholder="Enter your age" required>
+          </div>
+         
+          
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          
+          </div>
+        </div>
+        <div class="user-details">
+            
+              <div class="input-box1">
+                <span class="details">NIN</span>
+                <input type="text" id="nin" name="nin" placeholder="Enter your NIN" required>
+              </div>
+        <!-- </div>
+        <div class="gender-details">
+            <input type="radio" name="clientcategory" id="dot-1">
+            <input type="radio" name="clientcategory" id="dot-2">
+            <input type="radio" name="clientcategory" id="dot-3">
+            <span class="gender-title">Client category</span>
+            <div class="category">
+              <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="clientcategory">National</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="clientcategory">Refugee</span>
+            </label>
+            <label for="dot-3">
+                <span class="dot three"></span>
+                <span class="clientcategory">Foreigner</span>
+              </label>
+            </div>
+          </div> -->
+          <div class="user-details">
+            
+            <div class="input-box">
+              <span class="details">District</span>
+              <input type="text" id="district" name="district" placeholder="Enter your District" required>
+            </div>
+            
+            
+                <div class="input-box">
+                  <span class="details">Sub-county</span>
+                  <input type="text" id="subcounty" name="subcounty" placeholder="Enter your Subcounty" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Village</span>
+                    <input type="text" id="village" name="village" placeholder="Enter your Village" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Parish</span>
+                    <input type="text" id="parish" name="parish" placeholder="Enter your Parish" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Tribe</span>
+                    <input type="text" id="tribe" name="tribe" placeholder="Enter your Tribe" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Occupation</span>
+                    <input type="text" id="occupation" name="occupation" placeholder="Enter your Occupation" required>
+                  </div>
+                  <div class="input-box1">
+                    <span class="details">Phone Number</span>
+                    <input type="text" id="phoneNo" name="phoneNo" placeholder="Enter your phone number" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Complaint/Purpose for visit</span>
+                    <input type="text" id="complaint" name="complaint" placeholder="Enter complaint" required>
+                  </div>
+                  <h2>SECTION B: For Physician Use </h2>
+                  <div class="input-box">
+                    <span class="details">Physical Findings</span>
+                    <input type="text" id="findings" name="findings" placeholder="Enter findings" >
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Tests requested/done</span>
+                    <input type="text" id="tests" name="tests" placeholder="Enter tests done" >
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Outcome/Result</span>
+                    <input type="text" id="result" name="result" placeholder="Enter Result" >
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Lesion size if applicable</span>
+                    <input type="text" id="lesionsize" name="lesionsize" placeholder="Enter less" >
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Referred to/By</span>
+                    <input type="text" id="referredTo" name="referredTo" placeholder="Enter person who reffered" >
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Next follow up date if applicable</span>
+                    <input type="text" id="followUpDate" name="followUpDate" placeholder="Enter Result" >
+                  </div>
+                  
+      </div>
+      <!-- <div class="gender-details">
+        <input type="radio" name="clientcategory" id="dot-1">
+        <input type="radio" name="clientcategory" id="dot-2">
+        <input type="radio" name="clientcategory" id="dot-3">
+        <span class="gender-title">Client category</span>
+        <div class="category">
+          <label for="dot-1">
+          <span class="dot one"></span>
+          <span class="clientcategory">National</span>
+        </label>
+        <label for="dot-2">
+          <span class="dot two"></span>
+          <span class="clientcategory">Refugee</span>
+        </label>
+        <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="clientcategory">Foreigner</span>
+          </label>
+        </div>
+      </div> -->
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

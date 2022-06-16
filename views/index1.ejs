@@ -27,7 +27,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+  <link href="/assets/css/newlogin.css" rel="stylesheet">
+  
   
 </head>
 
@@ -56,9 +57,52 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+      
+      <input type="checkbox" id="show">
+      <label for="show" class="show-btn"> login </label>
+  
+      <div class="container1">
+          <label for="show" class="close-btn" title="close">×</label>
+          <h1>log in</h1>
+          <form>
+            <div class="error" style="background-color: red;"></div><br>
+              <label for="username">username</label>
+              <input type="text" id="username" required/>
+              <label for="password">Password</label>
+              <input type="password" id="password">
+              
+              <button type="submit" value="login" id="submit">Submit</button>
+              <div class="link">Not a member? <a href="/register">Sigup here</a></div>
+              
+          </form>
+      </div>
+      
 
-      <a href="/login" class="appointment-btn scrollto"><span class="d-none d-md-inline">login</a>
+      <!-- <a href="/login" class="appointment-btn scrollto"><span class="d-none d-md-inline">login</a> -->
       <a href="/register" class="appointment-btn scrollto"><span class="d-none d-md-inline">Contact a specialist</a>
+
+        <!-- <input type="checkbox" id="show">
+        <label for="show" class="show-btn"> login </label>
+    
+        <div class="container1">
+            <label for="show" class="close-btn" title="close">×</label>
+            <h1>Welcome</h1>
+            <form action="#">
+                <label>Email or Phone</label>
+                <input type="text">
+                <label>Password</label>
+                <input type="password">
+                <a href="#">Forgot Password?</a>
+                <button>Submit</button>
+                <div class="link">Not a member? <a href="#">Sigup here</a></div>
+                
+            </form>
+        </div>
+         -->
+              
+          </form>
+      </div>
+
 
     </div>
   </header><!-- End Header -->
@@ -686,6 +730,33 @@
 	     <!-----tweenmax.min.js cdn--------->
          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    const form = document.querySelector('form')
+    const username = document.querySelector('#username')
+    const password = document.querySelector('#password')
+    const display = document.querySelector('.error')
+   form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+      display.textContent = ''
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          body: JSON.stringify({ username: username.value, password: password.value }),
+          headers: { 'Content-Type': 'application/json' }
+        })
+        const data = await res.json()
+        if (res.status === 400 || res.status === 401) {
+          return display.textContent = `${data.message}. ${data.error ? data.error : ''}`
+        }
+        data.role === "specialist" ? location.assign('/show') : location.assign('/basic') 
+        
+      } 
+      catch (err) {
+        console.log(err.message)
+      }
+    })
+  </script>
 
 </body>
 

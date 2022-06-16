@@ -28,8 +28,8 @@ const { WELCOME_MESSAGE, DATABASE_URL } = process.env
 const outreachFormRoutes = require("./routes/outreachFormRoute")
 const specialistRoutes = require ("./routes/specialistRoute")
 const routes = require("./routes/recipeRoutes")
-
-
+const homeRoutes = require("./routes/home")
+const indexnewRoutes = require("./routes/indexnewRoute")
 
 // declare app isntance
 const app = express();
@@ -52,10 +52,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+app.use('/' , homeRoutes)
 
 app.use("/api/auth", require("./Auth/route"));
 app.use('/', routes);
-app.get("/home", (req, res) => res.render('index1'));
+app.get("/", (req, res) => res.render('index1'));
 
 app.get("/users", (req, res) => res.render('admin'));
 app.get("/breastcancer", (req, res) => res.render('b'));
@@ -67,17 +68,18 @@ app.get("/throatcancer", (req, res) => res.render('throatcancer'));
 app.get("/hospital", (req, res) => res.render('hospitalDashboard'));
 app.get("/specialist", (req, res) => res.render('speclialist'));
 app.get("/referral", (req, res) => res.render('referralForm'));
+app.get("/register", (req, res) => res.render('registerlayout'));
 app.use('/outreachform',outreachFormRoutes);
 app.use("/specialistReg",specialistRoutes );
 app.get("/prostatecancer", (req, res) => res.render('prostateCancer'));
-app.get("/register", (req, res) => res.render("register"));
-app.get("/login", (req, res) => res.render("login"));
+// app.get("/register", (req, res) => res.render("newregister"));
+app.get("/login", (req, res) => res.render("index1"));
 app.get("/logout", (req, res) => {
   res.cookie("jwt", "", { maxAge: "1" });
-  res.redirect("/home");
+  res.redirect("/");
 });
 app.get("/admin", adminAuth, (req, res) => res.render("hospitalDashboard"));
-app.get("/spec", specialistAuth, (req, res) => res.render("speclialist"));
+app.get("/spec", specialistAuth, (req, res) => res.render("newspecialistlist"));
 
 app.get("/basic", userAuth, (req, res) => res.render("patientDahboard"));
 

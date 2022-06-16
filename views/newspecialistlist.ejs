@@ -8,9 +8,8 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
 	<link rel="stylesheet" href="./assets/css/admin.css">
-	
 
-	<title>Patient</title>
+	<title> </title>
 </head>
 <body>
 
@@ -19,7 +18,7 @@
 	<section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i>
-			<span class="text">Patients's Corner</span>
+			<span class="text">Specialist's Corner</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
@@ -28,30 +27,33 @@
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-
 			
-
-   
-   
-
-
-
-			
-			<li>
-				<a href="/new">
+			<!-- <li>
+				<a href="#">
 					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a> -->
+			</li>
+			<li>
+				<a href="./contactform.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Emails</span>
+				</a>
+			</li>
+			<li>
+				<a href="/outreachform">
+					<i class='bx bxs-message-dots' ></i>
 					<span class="text">Consultations</span>
 				</a>
 			</li>
-			
 			<li>
-				<a href="#">
+				<a href="/specialistReg/specialist">
 					<i class='bx bxs-group' ></i>
-					<span class="text">All Lab</span>
+					<span class="text">specialists</span>
 				</a>
 			</li>
 			<li>
-				<a href="/blog">
+				<a href="/">
 					<i class='bx bxs-book' ></i>
 					<span class="text">Cancer Articles</span>
 				</a>
@@ -91,8 +93,6 @@
 			</a>
 			
 		</nav>
-
-		
 		<!-- NAVBAR -->
 
 		<!-- MAIN -->
@@ -112,15 +112,11 @@
 				</div>
 				<a href="#" class="btn-download">
 					<i class='bx bxs-cloud-download' ></i>
-					<span class="text">Download PDF</span>
+					<span class="text">Download Report</span>
 				</a>
 			</div>
 
-			
-			</div>
-
 			<ul class="box-info">
-
 				<li>
 					<i class='bx bxs-group' ></i>
 					<span class="text">
@@ -148,33 +144,48 @@
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
-						<h3>Referrals</h3>
+						<h3>Receive Consultations</h3>
 						<i class='bx bx-search' ></i>
 						<i class='bx bx-filter' ></i>
 					</div>
 					<table>
 						<thead>
+							
 							<tr>
-								<th>Patient Name</th>
-								<th>reason</th>
-								<th>Status</th>
+								<th>Client Number</th>
+								<th>Full Names</th>
+								<th>Age</th>
+								<th>Gender</th>
+								<th>Contact</th>
+								<th>Location of Outreach</th>
+								
 							</tr>
 						</thead>
 						<tbody>
+							<% students.forEach((student)=>{%>
 							<tr>
 								<td>
 									
-									<p>John Doe</p>
+									<p><%- student.clientNumber %></p>
 								</td>
-								<td>prostateCancer</td>
-								<td><span class="status completed">Completed</span></td>
+								<td><%- student.name %></td>
+								<td><%- student.age %></td>
+								<td><%- student.gender %></td>
+								<td><%- student.phoneNo %></td>
+								<td><%- student.location %></td>
+								<td> <a href="/edit/<%= student._id %>">
+									<span class="blue">View</span></a> 
+	
+								 <a href="/delete/<%= student._id %>">
+									 <span class="pink">Delete</span></a></td>
 							</tr>
 							
-							
+							<%  }) %>  
 							
 								
 						</tbody>
 					</table>
+					
 				</div>
 	
 			</div>
