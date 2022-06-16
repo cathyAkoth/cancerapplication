@@ -17,26 +17,26 @@
     <div class="title">Register specialist</div>
     <div class="content">
 
-        <form method='POST',action='/', name='form'>
+        <form method="post" action="/specialistReg/update/<%- studentdata._id %>">
             <div class="formclass">
                 
             <div class="user-details">
           <div class="input-box1">
             <span class="details">first Name</span>
-            <input type="textarea" id="firstname" name="firstname" placeholder="Enter first name" required>
+            <input type="textarea" id="firstname" name="firstname" value="<%- studentdata.firstname %>" / />
           </div>
           <div class="input-box1">
             <span class="details">Last Name</span>
-            <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" required>
+            <input type="text" id="lastname" name="lastname" value="<%- studentdata.lastname %>" / />
           </div>
           
    
         <div class="gender-details">
           <label for="gender">Gender</label><br>
-          <select name="gender" id="gender" required>
+          <select name="gender" id="gender" >
             <option value=""></option>
-            <option value="Female">Female</option>
-            <option value="Male">Male</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
         </select>
           
           </div>
@@ -45,9 +45,9 @@
         <div class="gender-details">
 
           <label for="specialisation">Specialisation</label><br>
-          <select name="specialisation" id="specialisation" required>
+          <select name="specialisation" id="specialisation" value="<%- studentdata.specialisation %>" / />
             <option value=""></option>
-              <option value="throat">Throat Cancer</option>
+              <option value="<%- studentdata.specialisation %>" / />Throat Cancer</option>
               <option value="breast">Breast Cancer</option>
               <option value="prostate">Prostate Cancer</option>
               <option value="breast">Cervical Cancer</option>
@@ -62,27 +62,27 @@
             
               <div class="input-box1">
                 <span class="details">Location</span>
-                <input type="text" id="location" name="location" placeholder="Enter  Location" required>
+                <input type="text" id="location" name="location" value="<%- studentdata.location %>" / />
               </div>
        
           <div class="user-details">
             
             <div class="input-box1">
               <span class="details">Phone Number</span>
-              <input type="text" id="telephoneNo" name="telephoneNo" placeholder="Enter Phone Number" required>
+              <input type="text" id="telephoneNo" name="telephoneNo" value="<%- studentdata.telephoneNo %>" / />
             </div>
             
             
                 <div class="input-box1">
                   <span class="details">Email</span>
-                  <input type="email" id="email" name="email" placeholder="Enter  Email" required>
+                  <input type="email" id="email" name="email" value="<%- studentdata.email %>" / />
                 </div>
                
                   
       </div>
       </div>
         <div class="button">
-          <input type="submit" value="Register">
+          <input type="submit" value="register">
         </div>
       </form>
     </div>

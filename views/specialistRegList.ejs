@@ -45,14 +45,11 @@
         <td><%= users[i].telephoneNo%></td>
         <td><%= users[i].email%></td>
         <td>
-            <a href="/outreachForm/update/'+._id"> <button>update</button></a>
-        </td>
-        <td>
-            <form method="Post" action="/outreachForm/delete">
-                <input type="hidden", name="id", value=".-id">
-                <button>Delete</button>
-            </form>
-        </td>
+            <a href="/update/<%= users._id %>"> <button>update</button></a>
+            <span class="blue">View</span></a> 
+	
+            <a href="specialistReg/delete/<%= users._id %>">
+              <span class="pink">Delete</span></a></td>
       </tr>
   <% }
            
