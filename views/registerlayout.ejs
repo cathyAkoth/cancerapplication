@@ -92,15 +92,17 @@
               <div class="title">
                  Sign Up
               </div>
-              <form>
+              <form name="registerForm">
                  <div class="error" style="background-color: red;"></div><br>
                  <div class="field">
-                    <input type="text" id="username" required>
+                    <input type="text" id="username" name="username" >
                     <label for="username">Username</label>
+                    <!-- <p>username_info.warnP</p> -->
                  </div>
                  <div class="field">
-                    <input type="password" id="password" required>
+                    <input type="password" id="password" name="password"  >
                     <label for="password">Password</label>
+                    <!-- <p>password1_info.warnP</p> -->
                  </div>
                  
                  <div class="field">
@@ -126,10 +128,12 @@
                <div class="field">
                   <input type="text" id="username" required>
                   <label for="username">Username</label>
+                  <p>username_info.warnP</p>
                </div>
                <div class="field">
                   <input type="password" id="password" required>
                   <label for="password">Password</label>
+                  <p>password1_info.warnP</p>
                </div>
                
                <div class="field">
@@ -212,12 +216,20 @@
 	     <!-----tweenmax.min.js cdn--------->
          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
   <script src="assets/js/main.js"></script>
-
+  <script src="/assets/js/register.js"></script>
   <script>
     const form = document.querySelector('form')
     const username = document.querySelector('#username')
     const password = document.querySelector('#password')
     const display = document.querySelector('.error')
+
+
+ 
+
+
+
+
+
 
      form.addEventListener('submit', async (e) => {
         e.preventDefault()
@@ -239,6 +251,11 @@
         }
 
       })
+
+
+
+
+
   </script>
 
 </body>

@@ -13,7 +13,7 @@ const UserSchema = new Mongoose.Schema({
   },
   role: {
     type: String,
-    default: "specialist",
+    default: "Basic",
     required: true,
   },
 });
