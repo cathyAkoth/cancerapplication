@@ -3,6 +3,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const nodemailer = require("nodemailer")
 
 const expressLayouts = require('express-ejs-layouts');
 const fileUpload = require('express-fileupload');
@@ -83,7 +84,43 @@ app.get("/spec", specialistAuth, (req, res) => res.render("newspecialistlist"));
 
 app.get("/basic", userAuth, (req, res) => res.render("patientDahboard"));
 
+//Routing
+app.get("/email", function(req, res){
+  res.render('email');
+})
 
+app.post("/send_email", function(req, response){
+  var from = req.body.from
+  var to = req.body.to
+  var subject = req.body.subject
+  var message = req.body.message
+  
+
+  var transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+          user: 'theo.projects123@gmail.com',
+          pass: 'nfkvkfceucescqzd'
+      }
+  })
+
+  var mailOptions = {
+      from:from,
+      to:to,
+      subject:subject,
+      text:message,
+      
+  }
+
+  transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+          console.log(error)
+      } else {
+          console.log("Email Sent: " + info.response)
+      }
+      response.redirect("/")
+  })
+})
 
 
 
