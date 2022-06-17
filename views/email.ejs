@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="/send_email" method="post">
-        <!-- From: <input type="email" name="from" id="from" ><br><br> -->
+        From: <input type="email" name="from" id="from" ><br><br>
         To: <input type="email" name="to" id="to" ><br><br>
         Subject: <input type="text" name="subject" id="subject"><br><br>
         Message:<br> <textarea id="message" name="message"></textarea> <br><br>
@@ -16,5 +16,56 @@
 
         <input type="submit" value="Send">
     </form>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="/assets/css/specialistform.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+   
+<body>
+    
+        
+  <div class="container">
+
+    <div class="title">Send email</div>
+    <div class="content">
+
+        <form action="/send_email" method="post">
+            <div class="formclass">
+                
+            <div class="user-details">
+          <div class="input-box1">
+            <span class="details">Email To:</span>
+            <input input type="email" name="to" id="to">
+          </div>
+          <div class="input-box1">
+            <span class="details">Subject:</span>
+            <input type="text" name="subject" id="subject">
+          </div>
+            
+              <div class="input-box1">
+                <span class="details">Message</span>
+                <input type="textarea" id="message" name="message"></textarea> 
+              </div>
+       
+          
+      </div>
+      </div>
+        <div class="button">
+          <input type="submit" value="Send Email">
+        </div>
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>
