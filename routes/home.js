@@ -23,6 +23,7 @@ Router.post('/add',(req,res)=>{
      const subcounty = req.body.subcounty
      const village = req.body.village;
      const parish = req.body.parish;
+     const email = req.body.email;
      const tribe = req.body.tribe;
      const occupation = req.body.occupation;
      const complaint = req.body.complaint;
@@ -44,6 +45,7 @@ Router.post('/add',(req,res)=>{
        serialNo,
        clientNumber,
        name,
+       email,
        age,
        sex,
        nin,
@@ -72,7 +74,7 @@ Router.post('/add',(req,res)=>{
        if(err){
            console.log("err is ")
        }else{
-           res.redirect('/basic')
+           res.redirect('/specialistReg')
        }
    })
 })

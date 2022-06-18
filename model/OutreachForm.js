@@ -77,9 +77,9 @@ const outreachFormSchema = new mongoose.Schema({
   },
   riskfactor:{
     type: String,
-    findings:{
+  findings:{
       type: String,
-      immutable: true
+    immutable: true
       //required: 'please fill in',
     },
     tests:{

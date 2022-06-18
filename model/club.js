@@ -55,6 +55,9 @@ let clubScheema = new schema({
       type: String,
       //required: 'please fill in',
   },
+  email:{
+    type : String,
+  },
   subcounty:{
     type: String,
     //required:'please select',
