@@ -749,7 +749,12 @@
         if (res.status === 400 || res.status === 401) {
           return display.textContent = `${data.message}. ${data.error ? data.error : ''}`
         }
-        data.role === "specialist" ? location.assign('/show') : location.assign('/basic') 
+        data.role === "specialist" ? location.assign('/show') : location.assign('/basic') || data.role === "Basic" ? Location.assign('/basic') : location.assign('/admin')
+        // data.role === "specialist"; location.assign('/show') 
+        // data.role === "Basic" ; location.assign('/basic')
+        // data.role === "admin" ; location.assign('/admin')
+
+        
         
       } 
       catch (err) {
