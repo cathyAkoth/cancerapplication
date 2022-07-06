@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="/assets/css/specialistform.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+   
+<body>
+    
+        
+  <div class="container">
+
+    <div class="title">Response</div>
+    <div class="content">
+        <form method='post' action='/response/addresponse' name="responseForm">
+            <div class="formclass">
+                
+            <div class="user-details">
+          <div class="input-box1">
+            <span class="details">Message</span>
+            <input type="textarea" id="message" name="message"  required>
+ 
+          </div>
+          <div class="input-box1">
+            <span class="details">Specialist Name</span>
+            <input type="text" id="specialistName" name="specialistName"  required>
+          </div>
+          
+   
+        
+        </div>
+
+        
+
+
+
+
+        <div class="user-details">
+            
+              <div class="input-box1">
+                <span class="details">Email</span>
+                <input type="text" id="email" name="email"  required>
+              </div>
+       
+          <div class="user-details">
+            
+            <div class="input-box1">
+              <span class="details">Phone Number</span>
+              <input type="text" id="phone" name="phone" required>
+            </div>
+            
+            <h1> Client Response</h1>
+                <div class="input-box1">
+                  <span class="details">Response</span>
+                  <input type="text" id="response" name="response" >
+                </div>
+               
+                  
+      </div>
+      </div>
+        <div class="button">
+          <input type="submit" value="SEND">
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>

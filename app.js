@@ -29,6 +29,7 @@ const { WELCOME_MESSAGE, DATABASE_URL } = process.env
 const outreachFormRoutes = require("./routes/outreachFormRoute")
 const specialistRoutes = require ("./routes/specialistRoute")
 const routes = require("./routes/recipeRoutes")
+const responseRoutes = require("./routes/responseRoute")
 const homeRoutes = require("./routes/home")
 const indexnewRoutes = require("./routes/indexnewRoute")
 
@@ -54,6 +55,7 @@ app.use(passport.session());
 
 
 app.use('/' , homeRoutes)
+app.use('/response', responseRoutes)
 
 app.use("/api/auth", require("./Auth/route"));
 app.use('/', routes);
@@ -71,6 +73,7 @@ app.get("/specialist", (req, res) => res.render('speclialist'));
 app.get("/referral", (req, res) => res.render('referralForm'));
 app.get("/register", (req, res) => res.render('registerlayout'));
 app.use('/outreachform',outreachFormRoutes);
+app.use("/response", responseRoutes)
 app.use("/specialistReg",specialistRoutes );
 app.get("/prostatecancer", (req, res) => res.render('prostateCancer'));
 // app.get("/register", (req, res) => res.render("newregister"));
@@ -118,7 +121,7 @@ app.post("/send_email", function(req, response){
       } else {
           console.log("Email Sent: " + info.response)
       }
-      response.redirect("/")
+      response.redirect("/email")
   })
 })
 

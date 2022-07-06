@@ -7,7 +7,7 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="./assets/css/admin.css">
+	<link rel="stylesheet" href="/assets/css/admin.css">
 	
 
 	<title>Patient</title>
@@ -45,9 +45,9 @@
 			</li>
 			
 			<li>
-				<a href="#">
-					<i class='bx bxs-group' ></i>
-					<span class="text">All Lab</span>
+				<a href="/email">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text"> Send Email</span>
 				</a>
 			</li>
 			<li>
@@ -155,21 +155,40 @@
 					<table>
 						<thead>
 							<tr>
-								<th>Patient Name</th>
-								<th>reason</th>
-								<th>Status</th>
+								
+								  
+								<th>date</th>
+								<th>Message</th>
+								<th>Specialist Name</th>
+								<th>Email</th>           
+								<th>Phone Number</th> 
+								
 							</tr>
+				 <!--  End of The Head -->
 						</thead>
+			 
+					
 						<tbody>
-							<tr>
-								<td>
-									
-									<p>John Doe</p>
-								</td>
-								<td>prostateCancer</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
-							
+					   <% students.forEach((student)=>{%>
+						 <tr>
+							 
+							 <td><%- student.createdAt %></td>
+							 <td><%- student.message %></td>
+							 <td><%- student.specialistName %></td>
+							 <td><%- student.email %></td>
+							 <td><%- student.phone %></td>
+							 
+							 <td>
+								 <a href="/updat/<%= student._id %>">
+									 <span class="blue">View</span></a> 
+	 
+								  <a href="/delete/<%= student._id %>">
+									  <span class="pink">Delete</span></a>
+							   </td>
+						 </tr>
+					 
+					 
+				   <%  }) %> 
 							
 							
 								
